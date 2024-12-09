@@ -2,7 +2,7 @@ package Person;
 
 import java.util.ArrayList;
 
-public abstract class Patient extends Person implements Subject{
+public class Patient extends Person implements Subject{
 
     // private boolean isIll; // na razie może niech tego nie będzie
     private VitalSigns vitalSigns;
