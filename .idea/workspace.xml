@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/ReceptionistSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/VitalSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VitalSigns.java" afterDir="false" />
-    </list>
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,12 +85,29 @@
       <option name="project" value="LOCAL" />
       <updated>1733777521698</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)">
+      <option name="closed" value="true" />
+      <created>1733788192945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733788192945</updated>
+    </task>
+    <task id="LOCAL-00005" summary="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)">
+      <option name="closed" value="true" />
+      <created>1733788358527</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733788358527</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany" />
     <MESSAGE value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
+    <MESSAGE value="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
+    <option name="LAST_COMMIT_MESSAGE" value="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
   </component>
 </project>
