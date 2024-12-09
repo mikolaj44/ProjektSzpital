@@ -22,10 +22,12 @@ public abstract class Doctor extends HospitalWorker implements Observer {
     public void registerWith(Subject s){
 
         s.registerObserver(this);
+        patients.add((Patient)s); // usunąłem dla bezpieczeństwa assignPatient bo ktoś mógłby niechący wywołać zapominając o modelu Obserwatora itd
     }
 
-    public void assignPatient(Patient p){
-        patients.add(p);
+    public void unRegisterWith(Subject s){
+
+        s.removeObserver(this);
     }
 
     @Override

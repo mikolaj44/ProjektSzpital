@@ -14,6 +14,8 @@ public abstract class HospitalDepartment {
     protected ArrayList<HospitalWorker> workers;
     protected ArrayList<Room> rooms;
 
+    // jednak będą jako osobne a nie wewnętrzne chyba \/\/\/
+
     //protected RoomManager roomManager;
     //protected PatientManager patientManager;
 
