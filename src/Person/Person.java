@@ -1,6 +1,11 @@
 package Person;
 
-public abstract class Person {
+import GenerationAndIO.Inputtable;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+public abstract class Person implements Inputtable {
 
     protected String name;
     protected String surname;
@@ -15,6 +20,8 @@ public abstract class Person {
         this.isMale = isMale;
         this.nationality = nationality;
     }
+
+    public Person(){} // do wpisywania danych musi być
 
     @Override
     public String toString() {

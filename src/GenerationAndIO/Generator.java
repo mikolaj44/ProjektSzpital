@@ -21,7 +21,7 @@ public class Generator {
     public static Patient randomPatient(){
 
         VitalSigns vitalSigns = randomVitalSigns();
-        return new Patient(name[randomRange(name.length)],surname[randomRange(surname.length)] ,randomRange(1,110),randomBoolean(), nationality[randomRange(nationality.length)], vitalSigns, new ArrayList<>());
+        return new Patient(name[randomRange(name.length)],surname[randomRange(surname.length)] ,randomRange(1,110),randomBoolean(), nationality[randomRange(nationality.length)], "", "",vitalSigns, new ArrayList<>());
     }
 
     public static Doctor randomDoctor(){

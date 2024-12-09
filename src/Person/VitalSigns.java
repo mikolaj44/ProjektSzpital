@@ -1,8 +1,10 @@
 package Person;
 
+import GenerationAndIO.Inputtable;
+
 import java.util.Arrays;
 
-public class VitalSigns {
+public class VitalSigns{
 
     private int[] bloodPressureMmHg;
     private int breathingRatePerMinute;

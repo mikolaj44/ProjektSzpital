@@ -5,16 +5,28 @@ import java.util.ArrayList;
 public class Patient extends Person implements Subject{
 
     // private boolean isIll; // na razie może niech tego nie będzie
+    // private Room room;
     private VitalSigns vitalSigns;
+    private String description;
+    private String diagnosis = "";
+
     private ArrayList<Illness> illnesses;
     private ArrayList<Doctor> doctors;
-    // private Room room;
 
-    public Patient(String name, String surname, double age, boolean isMale, String nationality, VitalSigns vitalSigns, ArrayList<Illness> illnesses) {
+    public Patient(String name, String surname, double age, boolean isMale, String nationality, String description, String diagnosis, VitalSigns vitalSigns, ArrayList<Illness> illnesses) {
         super(name, surname, age, isMale, nationality);
         this.vitalSigns = vitalSigns;
         this.illnesses = illnesses;
+        this.description = description;
+        this.diagnosis = diagnosis;
         this.doctors = new ArrayList<>(); // nie ustawiamy doktorów tutaj (tak samo nie ma settera)
+    }
+
+    public Patient(){};
+
+    public boolean isAlive(){ // TO DO
+
+        return true;
     }
 
     public void registerObserver(Observer o){
@@ -65,6 +77,22 @@ public class Patient extends Person implements Subject{
 
     public ArrayList<Doctor> getDoctors() {
         return doctors;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDiagnosis() {
+        return diagnosis;
+    }
+
+    public void setDiagnosis(String diagnosis) {
+        this.diagnosis = diagnosis;
     }
 
     // NIE MA SETTERA DLA DOKTORÓW NA RAZIE BO TO PSUJE

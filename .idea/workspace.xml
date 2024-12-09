@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/ReceptionistSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VitalSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VitalSigns.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,9 +28,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mikolaj44"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mikolaj44/ProjektSzpital",
+    "accountId": "fb103807-4395-44fa-8bd6-64ac72daae8a"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2pziCdom2dFMA5Es6BGrR18g7iu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -33,14 +51,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,11 +76,28 @@
       <option name="project" value="LOCAL" />
       <updated>1733776432428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo">
+      <option name="closed" value="true" />
+      <created>1733777479232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733777479232</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo">
+      <option name="closed" value="true" />
+      <created>1733777521698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733777521698</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany" />
-    <option name="LAST_COMMIT_MESSAGE" value="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany" />
+    <MESSAGE value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
   </component>
 </project>
