@@ -1,7 +1,5 @@
 package Person;
 
-import GenerationAndIO.Inputtable;
-
 import java.util.Arrays;
 
 public class VitalSigns{

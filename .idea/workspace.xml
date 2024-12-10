@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="Console Input interface and input in main">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="to co wcześniej pisałem się nie dodało">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleIODoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllDoctors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleIOPatient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputPatient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleIOViewAllPatients.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleInputtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleInputtable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleInputtable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Inputtable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VitalSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VitalSigns.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +28,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="d502e25444d719edcc01316f47291e17a88ad41b" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -147,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733833319711</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="zmieniłem ConsoleInputtable na GuiElement, podzieliłem każdą klasę &quot;gui&quot; według jednej rzeczy jaką wykonuje - input albo output. Main nadal działa (chyba), powiedzcie czy to może zostać czy nie">
+      <option name="closed" value="true" />
+      <created>1733868080730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733868080730</updated>
+    </task>
+    <task id="LOCAL-00008" summary="to co wcześniej pisałem się nie dodało">
+      <option name="closed" value="true" />
+      <created>1733869267865</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733869267865</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +185,8 @@
     <MESSAGE value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
     <MESSAGE value="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
     <MESSAGE value="Console Input interface and input in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Console Input interface and input in main" />
+    <MESSAGE value="zmieniłem ConsoleInputtable na GuiElement, podzieliłem każdą klasę &quot;gui&quot; według jednej rzeczy jaką wykonuje - input albo output. Main nadal działa (chyba), powiedzcie czy to może zostać czy nie" />
+    <MESSAGE value="to co wcześniej pisałem się nie dodało" />
+    <option name="LAST_COMMIT_MESSAGE" value="to co wcześniej pisałem się nie dodało" />
   </component>
 </project>

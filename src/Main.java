@@ -29,12 +29,12 @@ public class Main {
 
         // performAction all options
         while (true) {
-            if (!ShowMenu()) break;
+            if (!showMenu()) break;
         }
     }
 
     // returns false if chosen option "end" else return true
-    private static boolean ShowMenu() {
+    private static boolean showMenu() {
         int i;
         // performAction all options to choose
         for(i = 0; i < _consoleMenuOptions.size(); i++)

@@ -1,11 +1,6 @@
 package Person;
 
-import GenerationAndIO.Inputtable;
-
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-
-public abstract class Person implements Inputtable {
+public abstract class Person {
 
     protected String name;
     protected String surname;
