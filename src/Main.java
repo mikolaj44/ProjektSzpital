@@ -1,4 +1,5 @@
 import GenerationAndIO.ConsoleIODoctor;
+import GenerationAndIO.ConsoleIOPatient;
 import GenerationAndIO.ConsoleIOViewAllPatients;
 import GenerationAndIO.ConsoleImputable;
 import Person.HospitalWorker;
@@ -25,6 +26,7 @@ public class Main {
         _ConsoleMenuOptions = new ArrayList<>();
         _ConsoleMenuOptions.add(new ConsoleIOViewAllPatients(patients));
         _ConsoleMenuOptions.add(new ConsoleIODoctor(workers));
+        _ConsoleMenuOptions.add(new ConsoleIOPatient(patients));
         // show all options
         while (true) {
             if (!ShowMenu()) break;
