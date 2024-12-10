@@ -3,14 +3,12 @@ package Hospital;
 public class SimulationSystem extends HospitalSystem {
 
     private int updateSpeedMs;
-    private int hoursPassed;
-    private int daysPassed;
+    private Date date;
 
-    public SimulationSystem(DepartmentManager manager, HospitalInfo hospitalInfo, int updateSpeedMs, int hoursPassed, int daysPassed) {
+    public SimulationSystem(DepartmentManager manager, HospitalInfo hospitalInfo, Date date) {
         super(manager, hospitalInfo);
         this.updateSpeedMs = updateSpeedMs;
-        this.hoursPassed = hoursPassed;
-        this.daysPassed = daysPassed;
+        this.date = date;
     }
 
     // TO DO :
