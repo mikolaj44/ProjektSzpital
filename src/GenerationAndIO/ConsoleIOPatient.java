@@ -42,8 +42,10 @@ public class ConsoleIOPatient implements ConsoleInputtable {
         System.out.println();
 
         // Nie sprawdza na ten moment czy użytkownik dał poprawna odpowiedź
+        scanner.nextLine();
         System.out.print("Podaj plec pacjenta (M/K): ");
         String sexString = scanner.nextLine();
+        System.out.println();
 
         boolean isMale;
 
