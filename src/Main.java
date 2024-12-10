@@ -1,7 +1,7 @@
 import GenerationAndIO.ConsoleIODoctor;
 import GenerationAndIO.ConsoleImputable;
+import Person.HospitalWorker;
 import Person.Patient;
-import com.sun.source.tree.WhileLoopTree;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -9,14 +9,20 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static List<ConsoleImputable> _ConsoleMenuOprions;
+    private static List<ConsoleImputable> _ConsoleMenuOptions;
 
     public static void main(String[] args) {
 
         ArrayList<Patient> patients = new ArrayList<Patient>();
+        ArrayList<HospitalWorker> workers = new ArrayList<HospitalWorker>();
 
-        _ConsoleMenuOprions = new ArrayList<ConsoleImputable>();
-        _ConsoleMenuOprions.add(new ConsoleIODoctor());
+        // TO DO: add doctors (cannot now because doctor is abstract)
+        // How to pass data to classes that output co console?
+        // In what class are all patients and workers?
+        //workers.add()
+
+        _ConsoleMenuOptions = new ArrayList<ConsoleImputable>();
+        _ConsoleMenuOptions.add(new ConsoleIODoctor(workers));
         // show all options
         while (ShowMenu()) {
 
@@ -27,10 +33,10 @@ public class Main {
     private static boolean ShowMenu() {
         int i;
         // show all options to choose
-        for(i = 0; i < _ConsoleMenuOprions.size(); i++)
+        for(i = 0; i < _ConsoleMenuOptions.size(); i++)
         {
             // variable i will be shown from 1 to n+1
-            System.out.println((i+1) + ". " + _ConsoleMenuOprions.get(i).GetDescription());
+            System.out.println((i+1) + ". " + _ConsoleMenuOptions.get(i).GetDescription());
         }
         // add options to end program
         System.out.println((i + 1)  + ". Zakończ.");
@@ -41,7 +47,7 @@ public class Main {
             int choose =  scanner.nextInt() - 1;
             if (choose == i)
                 return false;
-            _ConsoleMenuOprions.get(choose).ShowMenu();
+            _ConsoleMenuOptions.get(choose).ShowMenu();
         }
         catch(InputMismatchException e)
         {
