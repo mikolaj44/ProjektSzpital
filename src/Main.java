@@ -1,7 +1,4 @@
-import GenerationAndIO.ConsoleIODoctor;
-import GenerationAndIO.ConsoleIOPatient;
-import GenerationAndIO.ConsoleIOViewAllPatients;
-import GenerationAndIO.ConsoleInputtable;
+import GenerationAndIO.*;
 import Person.HospitalWorker;
 import Person.Patient;
 
@@ -11,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static List<ConsoleInputtable> _ConsoleMenuOptions;
+    private static List<GuiElement> _consoleMenuOptions;
 
     public static void main(String[] args) {
 
@@ -23,11 +20,14 @@ public class Main {
         // In what class are all patients and workers?
         //workers.add()
 
-        _ConsoleMenuOptions = new ArrayList<>();
-        _ConsoleMenuOptions.add(new ConsoleIOViewAllPatients(patients));
-        _ConsoleMenuOptions.add(new ConsoleIODoctor(workers));
-        _ConsoleMenuOptions.add(new ConsoleIOPatient(patients));
-        // show all options
+        _consoleMenuOptions = new ArrayList<>();
+
+        _consoleMenuOptions.add(new GuiInputPatient(patients));
+        _consoleMenuOptions.add(new GuiInputDoctor(workers));
+        _consoleMenuOptions.add(new GuiShowAllPatients(patients));
+        _consoleMenuOptions.add(new GuiShowAllDoctors(workers));
+
+        // performAction all options
         while (true) {
             if (!ShowMenu()) break;
         }
@@ -36,11 +36,11 @@ public class Main {
     // returns false if chosen option "end" else return true
     private static boolean ShowMenu() {
         int i;
-        // show all options to choose
-        for(i = 0; i < _ConsoleMenuOptions.size(); i++)
+        // performAction all options to choose
+        for(i = 0; i < _consoleMenuOptions.size(); i++)
         {
             // variable i will be shown from 1 to n+1
-            System.out.println((i+1) + ". " + _ConsoleMenuOptions.get(i).getDescription());
+            System.out.println((i+1) + ". " + _consoleMenuOptions.get(i).getDescription());
         }
         // add options to end program
         System.out.println((i + 1)  + ". Zakończ.");
@@ -51,7 +51,7 @@ public class Main {
             int chosenVal =  scanner.nextInt() - 1;
             if (chosenVal == i)
                 return false;
-            _ConsoleMenuOptions.get(chosenVal).showMenu();
+            _consoleMenuOptions.get(chosenVal).performAction();
         }
         catch(InputMismatchException e)
         {

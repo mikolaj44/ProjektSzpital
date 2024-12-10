@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class ConsoleIOPatient implements ConsoleInputtable {
+public class GuiInputPatient implements GuiElement {
 
     private ArrayList<Patient> _patients; // to powinno dodawać to oddziału odpowiedniego który też się poda
 
-    public ConsoleIOPatient() {
+    public GuiInputPatient() {
         _patients = new ArrayList<>();
     }
 
-    public ConsoleIOPatient(ArrayList<Patient> patients) {
+    public GuiInputPatient(ArrayList<Patient> patients) {
         _patients = patients;
     }
 
@@ -24,7 +24,7 @@ public class ConsoleIOPatient implements ConsoleInputtable {
     }
 
     @Override
-    public void showMenu() {
+    public void performAction() {
         Scanner scanner = new Scanner(System.in);
 
         // Póki co nie sprawdza poprawności wpisywanych danych
