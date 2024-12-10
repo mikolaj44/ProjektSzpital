@@ -13,19 +13,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Patient> patients = new ArrayList<Patient>();
-        ArrayList<HospitalWorker> workers = new ArrayList<HospitalWorker>();
+        ArrayList<Patient> patients = new ArrayList<>();
+        ArrayList<HospitalWorker> workers = new ArrayList<>();
 
         // TO DO: add doctors (cannot now because doctor is abstract)
         // How to pass data to classes that output co console?
         // In what class are all patients and workers?
         //workers.add()
 
-        _ConsoleMenuOptions = new ArrayList<ConsoleImputable>();
+        _ConsoleMenuOptions = new ArrayList<>();
         _ConsoleMenuOptions.add(new ConsoleIODoctor(workers));
         // show all options
-        while (ShowMenu()) {
-
+        while (true) {
+            if (!ShowMenu()) break;
         }
     }
 
