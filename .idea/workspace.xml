@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="Console Input interface and input in main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleImputable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleImputable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,20 +23,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;mikolaj44&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/mikolaj44/ProjektSzpital.git",
-    "accountId": "151a6480-334c-41ce-ba11-2473470cd884"
+    "accountId": "96bf436c-9fd1-4b1c-8715-d7f4d283774e"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -52,12 +64,26 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "interface-console",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733775179856</updated>
+      <workItem from="1733828764554" duration="5976000" />
     </task>
     <task id="LOCAL-00001" summary="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany">
       <option name="closed" value="true" />
@@ -107,13 +134,36 @@
       <option name="project" value="LOCAL" />
       <updated>1733788358527</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Console Input interface and input in main">
+      <option name="closed" value="true" />
+      <created>1733833319711</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733833319711</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wstępne implementacje do PatientManager, RoomManager, dodałem opcję wyrejestrowania Obserwatora, drobne zmiany" />
     <MESSAGE value="dodałem ogólną abstrakcyjną klasę HospitalSystem i dziedziczą z niej SimulationSystem i ManagementSystem, zmieniłem nazwę Hospital na HospitalInfo" />
     <MESSAGE value="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
-    <option name="LAST_COMMIT_MESSAGE" value="interfejs Inputtable z dwoma metodami - mechanizm do ustawiania pól z wejścia w dość elastyczny sposób i baza pod funkcję wpisywania osób przez recepcjonistę (ManagementSystem zmieniony na ReceptionistSystem, potem doda się inne)" />
+    <MESSAGE value="Console Input interface and input in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Console Input interface and input in main" />
   </component>
 </project>
