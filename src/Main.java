@@ -1,3 +1,4 @@
+import GenerationAndIO.ConsoleIODoctor;
 import GenerationAndIO.ConsoleImputable;
 import Person.Patient;
 import com.sun.source.tree.WhileLoopTree;
@@ -15,6 +16,7 @@ public class Main {
         ArrayList<Patient> patients = new ArrayList<Patient>();
 
         _ConsoleMenuOprions = new ArrayList<ConsoleImputable>();
+        _ConsoleMenuOprions.add(new ConsoleIODoctor());
         // show all options
         while (ShowMenu()) {
 
@@ -25,17 +27,18 @@ public class Main {
     private static boolean ShowMenu() {
         int i;
         // show all options to choose
-        for(i = 1; i <= _ConsoleMenuOprions.size(); i++)
+        for(i = 0; i < _ConsoleMenuOprions.size(); i++)
         {
-            System.out.println(i + ". " + _ConsoleMenuOprions.get(i).GetDescription());
+            // variable i will be shown from 1 to n+1
+            System.out.println((i+1) + ". " + _ConsoleMenuOprions.get(i).GetDescription());
         }
         // add options to end program
-        i++;
-        System.out.println(i + ". Zakończ.");
+        System.out.println((i + 1)  + ". Zakończ.");
         Scanner scanner = new Scanner(System.in);
         try
         {
-            int choose =  scanner.nextInt();
+            // variable i will be shown from 1 to n+1
+            int choose =  scanner.nextInt() - 1;
             if (choose == i)
                 return false;
             _ConsoleMenuOprions.get(choose).ShowMenu();
