@@ -1,4 +1,5 @@
 import GenerationAndIO.ConsoleImputable;
+import Person.Patient;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -7,6 +8,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        ArrayList<Patient> patients = new ArrayList<Patient>();
 
         List<ConsoleImputable> listOfOptions = new ArrayList<ConsoleImputable>();
         for(int i = 1; i <= listOfOptions.size(); i++)
