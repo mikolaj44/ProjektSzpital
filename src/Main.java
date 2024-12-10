@@ -1,7 +1,7 @@
 import GenerationAndIO.ConsoleIODoctor;
 import GenerationAndIO.ConsoleIOPatient;
 import GenerationAndIO.ConsoleIOViewAllPatients;
-import GenerationAndIO.ConsoleImputable;
+import GenerationAndIO.ConsoleInputtable;
 import Person.HospitalWorker;
 import Person.Patient;
 
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static List<ConsoleImputable> _ConsoleMenuOptions;
+    private static List<ConsoleInputtable> _ConsoleMenuOptions;
 
     public static void main(String[] args) {
 
@@ -40,7 +40,7 @@ public class Main {
         for(i = 0; i < _ConsoleMenuOptions.size(); i++)
         {
             // variable i will be shown from 1 to n+1
-            System.out.println((i+1) + ". " + _ConsoleMenuOptions.get(i).GetDescription());
+            System.out.println((i+1) + ". " + _ConsoleMenuOptions.get(i).getDescription());
         }
         // add options to end program
         System.out.println((i + 1)  + ". Zakończ.");
@@ -48,10 +48,10 @@ public class Main {
         try
         {
             // variable i will be shown from 1 to n+1
-            int choose =  scanner.nextInt() - 1;
-            if (choose == i)
+            int chosenVal =  scanner.nextInt() - 1;
+            if (chosenVal == i)
                 return false;
-            _ConsoleMenuOptions.get(choose).ShowMenu();
+            _ConsoleMenuOptions.get(chosenVal).showMenu();
         }
         catch(InputMismatchException e)
         {

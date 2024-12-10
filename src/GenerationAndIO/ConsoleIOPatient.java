@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class ConsoleIOPatient implements ConsoleImputable {
+public class ConsoleIOPatient implements ConsoleInputtable {
 
-    private ArrayList<Patient> _patients;
+    private ArrayList<Patient> _patients; // to powinno dodawać to oddziału odpowiedniego który też się poda
 
     public ConsoleIOPatient() {
         _patients = new ArrayList<>();
@@ -19,12 +19,12 @@ public class ConsoleIOPatient implements ConsoleImputable {
     }
 
     @Override
-    public String GetDescription() {
+    public String getDescription() {
         return "Wprowadzanie pacjenta do systemu";
     }
 
     @Override
-    public void ShowMenu() {
+    public void showMenu() {
         Scanner scanner = new Scanner(System.in);
 
         // Póki co nie sprawdza poprawności wpisywanych danych

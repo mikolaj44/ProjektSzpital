@@ -3,10 +3,9 @@ package GenerationAndIO;
 import Person.Doctor;
 import Person.HospitalWorker;
 
-import javax.print.Doc;
 import java.util.List;
 
-public class ConsoleIODoctor implements ConsoleImputable
+public class ConsoleIODoctor implements ConsoleInputtable
 {
     private List<HospitalWorker> _hospitalWorkers;
     public ConsoleIODoctor() {
@@ -15,12 +14,12 @@ public class ConsoleIODoctor implements ConsoleImputable
     }
 
     @Override
-    public String GetDescription() {
+    public String getDescription() {
         return "Wyświetlanie lekarzy";
     }
 
     @Override
-    public void ShowMenu() {
+    public void showMenu() {
         if(_hospitalWorkers == null)
         {
             System.out.println("Nie ma żadnych lekarzy.");

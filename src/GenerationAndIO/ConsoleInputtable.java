@@ -1,8 +1,8 @@
 package GenerationAndIO;
 
-public interface ConsoleImputable {
+public interface ConsoleInputtable {
     // returns short description of submenu
-    public String GetDescription();
+    public String getDescription();
     // shows to user submenu
-    public void ShowMenu();
+    public void showMenu();
 }
