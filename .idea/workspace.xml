@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="to co wcześniej pisałem się nie dodało">
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/ConsoleInputtable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Inputtable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/VitalSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VitalSigns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/Illness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Illness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ReceptionistInputTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +43,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/mikolaj44/ProjektSzpital.git&quot;,
-    &quot;accountId&quot;: &quot;96bf436c-9fd1-4b1c-8715-d7f4d283774e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mikolaj44/ProjektSzpital",
+    "accountId": "fb103807-4395-44fa-8bd6-64ac72daae8a"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
@@ -64,31 +63,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "interface-console",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;interface-console&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -163,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733869267865</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa">
+      <option name="closed" value="true" />
+      <created>1733869958291</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733869958291</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +186,7 @@
     <MESSAGE value="Console Input interface and input in main" />
     <MESSAGE value="zmieniłem ConsoleInputtable na GuiElement, podzieliłem każdą klasę &quot;gui&quot; według jednej rzeczy jaką wykonuje - input albo output. Main nadal działa (chyba), powiedzcie czy to może zostać czy nie" />
     <MESSAGE value="to co wcześniej pisałem się nie dodało" />
-    <option name="LAST_COMMIT_MESSAGE" value="to co wcześniej pisałem się nie dodało" />
+    <MESSAGE value="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa" />
+    <option name="LAST_COMMIT_MESSAGE" value="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa" />
   </component>
 </project>

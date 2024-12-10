@@ -1,14 +1,17 @@
+package Tests;
+
 import GenerationAndIO.*;
+import Hospital.HospitalDepartment;
 import Person.HospitalWorker;
 import Person.Patient;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static List<GuiElement> _consoleMenuOptions;
+
+    private static ArrayList<GuiElement> _consoleMenuOptions;
 
     public static void main(String[] args) {
 
@@ -16,8 +19,13 @@ public class Main {
         ArrayList<HospitalWorker> workers = new ArrayList<>();
 
         // TO DO: add doctors (cannot now because doctor is abstract)
+
         // How to pass data to classes that output co console?
+        // - I think: they deal with that through their own methods (handling user input etc.)
+
         // In what class are all patients and workers?
+        // - Answer: in each of the HospitalDepartments
+
         //workers.add()
 
         _consoleMenuOptions = new ArrayList<>();

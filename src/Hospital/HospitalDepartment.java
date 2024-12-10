@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 import Person.*;
 
-public abstract class HospitalDepartment {
+public class HospitalDepartment {
 
     protected String name;
 
@@ -20,6 +20,15 @@ public abstract class HospitalDepartment {
     //protected PatientManager patientManager;
 
     protected ArrayList<FieldOfMedicine> possibleFields;
+
+    public HospitalDepartment(String name){
+        this.name = name;
+        this.queue = new PriorityQueue<>();
+        this.patients = new ArrayList<>();
+        this.workers = new ArrayList<>();
+        this.rooms = new ArrayList<>();
+        this.possibleFields = new ArrayList<>();
+    }
 
     public HospitalDepartment(String name, PriorityQueue<Person> queue, ArrayList<Patient> patients, ArrayList<HospitalWorker> workers, ArrayList<Room> rooms, ArrayList<FieldOfMedicine> possibleFields) {
         this.name = name;

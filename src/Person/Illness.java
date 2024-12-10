@@ -2,13 +2,17 @@ package Person;
 
 public abstract class Illness {
 
+    private String name;
+    private String description;
     private int averageRecoveryTimeDays;
     private int dayWhenDiagnosed;
     private double lethality;
     private double effectMultiplier;
     private boolean surgeryIsNeeded;
 
-    public Illness(int averageRecoveryTimeDays, int dayWhenDiagnosed, double lethality, double effectMultiplier, boolean surgeryIsNeeded) {
+    public Illness(String name, String description, int averageRecoveryTimeDays, int dayWhenDiagnosed, double lethality, double effectMultiplier, boolean surgeryIsNeeded) {
+        this.name = name;
+        this.description = description;
         this.averageRecoveryTimeDays = averageRecoveryTimeDays;
         this.dayWhenDiagnosed = dayWhenDiagnosed;
         this.lethality = lethality;
@@ -32,12 +36,30 @@ public abstract class Illness {
     @Override
     public String toString() {
         return "Illness{" +
-                "averageRecoveryTimeDays=" + averageRecoveryTimeDays +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", averageRecoveryTimeDays=" + averageRecoveryTimeDays +
                 ", dayWhenDiagnosed=" + dayWhenDiagnosed +
                 ", lethality=" + lethality +
                 ", effectMultiplier=" + effectMultiplier +
                 ", surgeryIsNeeded=" + surgeryIsNeeded +
                 '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getAverageRecoveryTimeDays() {
