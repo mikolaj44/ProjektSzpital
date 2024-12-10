@@ -1,4 +1,5 @@
 import GenerationAndIO.ConsoleIODoctor;
+import GenerationAndIO.ConsoleIOViewAllPatients;
 import GenerationAndIO.ConsoleImputable;
 import Person.HospitalWorker;
 import Person.Patient;
@@ -22,6 +23,7 @@ public class Main {
         //workers.add()
 
         _ConsoleMenuOptions = new ArrayList<>();
+        _ConsoleMenuOptions.add(new ConsoleIOViewAllPatients(patients));
         _ConsoleMenuOptions.add(new ConsoleIODoctor(workers));
         // show all options
         while (true) {
