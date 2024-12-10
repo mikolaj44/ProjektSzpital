@@ -22,6 +22,16 @@ public class Patient extends Person implements Subject{
         this.doctors = new ArrayList<>(); // nie ustawiamy doktorów tutaj (tak samo nie ma settera)
     }
 
+    // Konstruktor bez diagnozy, chorób i vitalSigns
+    public Patient(String name, String surname, double age, boolean isMale, String nationality, String description) {
+        super(name, surname, age, isMale, nationality);
+        this.description = description;
+        this.doctors = new ArrayList<>();
+        this.diagnosis = "";
+        this.illnesses = null;
+        this.vitalSigns = null;
+    }
+
     public Patient(){};
 
     public boolean isAlive(){ // TO DO
