@@ -30,6 +30,8 @@ public abstract class Doctor extends HospitalWorker implements Observer {
         s.removeObserver(this);
     }
 
+    public abstract void performAction(Patient p);
+
     @Override
     public String toString() {
         return super.toString() + "Doctor{" +
