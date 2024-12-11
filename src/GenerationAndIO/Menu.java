@@ -56,6 +56,9 @@ public class Menu {
         {
             System.out.println("Nie ma takiej opcji.");
         }
+
+        System.out.println();
+
         return true;
     }
 }

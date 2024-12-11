@@ -2,6 +2,7 @@ package Tests;
 
 import GenerationAndIO.*;
 import Hospital.HospitalDepartment;
+import Hospital.HospitalInfo;
 import Person.HospitalWorker;
 import Person.Patient;
 
@@ -13,10 +14,13 @@ public class MenuClassTest {
 
     public static void main(String[] args) {
 
-        ArrayList<Patient> patients = new ArrayList<>();
-        ArrayList<HospitalWorker> workers = new ArrayList<>();
+        ArrayList<HospitalDepartment> departments = new ArrayList<>();
+        departments.add(new HospitalDepartment("SOR"));
+        departments.add(new HospitalDepartment("Oddzial polozniczy"));
 
-        Menu mainMenu = new Menu(new GuiInputPatient(patients), new GuiInputDoctor(workers), new GuiShowAllPatients(patients), new GuiShowAllDoctors(workers));
+        HospitalInfo hospitalInfo = new HospitalInfo(-1,-1,departments);
+
+        Menu mainMenu = new Menu(new GuiInputPatient(hospitalInfo), new GuiInputDoctor(hospitalInfo), new GuiShowAllPatients(hospitalInfo), new GuiShowAllDoctors(hospitalInfo));
 
         while (true) {
             if (!mainMenu.showMenu()) break;

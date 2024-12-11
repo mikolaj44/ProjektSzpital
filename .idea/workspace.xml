@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa">
+    <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="-dodałem klasę Menu która trzyma różne GuiElements i test, który ją wywołuje&#10;-dodałem składowe nazwa i opis do choroby&#10;-HospitalDepartment usunięto abstract&#10;-usunąłem ReceptionistInputTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputDoctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputPatient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputPatient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllDoctors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllDoctors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllPatients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllPatients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/DepartmentManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/Illness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Illness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ReceptionistInputTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/HospitalInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/PatientManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/ReceptionistSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/RoomManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/HospitalWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/HospitalWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/MenuClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/MenuClassTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,23 +76,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;interface-console&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MenuClassTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "interface-console",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -162,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733869958291</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-dodałem klasę Menu która trzyma różne GuiElements i test, który ją wywołuje&#10;-dodałem składowe nazwa i opis do choroby&#10;-HospitalDepartment usunięto abstract&#10;-usunąłem ReceptionistInputTest">
+      <option name="closed" value="true" />
+      <created>1733874184515</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733874184515</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +209,7 @@
     <MESSAGE value="zmieniłem ConsoleInputtable na GuiElement, podzieliłem każdą klasę &quot;gui&quot; według jednej rzeczy jaką wykonuje - input albo output. Main nadal działa (chyba), powiedzcie czy to może zostać czy nie" />
     <MESSAGE value="to co wcześniej pisałem się nie dodało" />
     <MESSAGE value="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa" />
-    <option name="LAST_COMMIT_MESSAGE" value="usunąłem niepotrzebne klasy czyli Inputtable moją i ConsoleInputtable i też jakieś drobne zmiany typu komentowanie / zmiana kejsa" />
+    <MESSAGE value="-dodałem klasę Menu która trzyma różne GuiElements i test, który ją wywołuje&#10;-dodałem składowe nazwa i opis do choroby&#10;-HospitalDepartment usunięto abstract&#10;-usunąłem ReceptionistInputTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="-dodałem klasę Menu która trzyma różne GuiElements i test, który ją wywołuje&#10;-dodałem składowe nazwa i opis do choroby&#10;-HospitalDepartment usunięto abstract&#10;-usunąłem ReceptionistInputTest" />
   </component>
 </project>

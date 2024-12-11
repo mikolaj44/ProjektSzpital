@@ -1,11 +1,12 @@
 package Person;
 
-public abstract class HospitalWorker {
+public abstract class HospitalWorker extends Person{
 
     protected int startWorkHour;
     protected int endWorkHour;
 
-    public HospitalWorker(int startWorkHour, int endWorkHour) {
+    public HospitalWorker(String name, String surname, double age, boolean isMale, String nationality, int startWorkHour, int endWorkHour) {
+        super(name, surname, age, isMale, nationality);
         this.startWorkHour = startWorkHour;
         this.endWorkHour = endWorkHour;
     }

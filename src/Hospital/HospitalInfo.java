@@ -46,12 +46,4 @@ public class HospitalInfo {
     public void setDepartments(ArrayList<HospitalDepartment> departments) {
         this.departments = departments;
     }
-
-    public static class System {
-
-        private DepartmentManager manager;
-        private HospitalInfo hospitalInfo;
-
-
-    }
 }

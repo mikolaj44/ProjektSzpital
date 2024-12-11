@@ -7,10 +7,10 @@ public abstract class Doctor extends HospitalWorker implements Observer {
     protected FieldOfMedicine fieldOfMedicine;
     protected ArrayList<Patient> patients;
 
-    public Doctor(int startWorkHour, int endWorkHour, FieldOfMedicine fieldOfMedicine) {
-        super(startWorkHour, endWorkHour);
+    public Doctor(String name, String surname, double age, boolean isMale, String nationality, int startWorkHour, int endWorkHour, FieldOfMedicine fieldOfMedicine) {
+        super(name, surname, age, isMale, nationality, startWorkHour, endWorkHour);
         this.fieldOfMedicine = fieldOfMedicine;
-        this.patients = new ArrayList<>(); // tak samo jak w pacjencie, nie dodajemy w konstruktorze
+        this.patients = new ArrayList<>();
     }
 
     //public void update()

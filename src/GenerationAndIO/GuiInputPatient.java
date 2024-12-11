@@ -1,21 +1,24 @@
 package GenerationAndIO;
 
-import Person.Patient;
-
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
+import Hospital.HospitalDepartment;
+import Hospital.HospitalInfo;
+import Person.Patient;
+
+import static ListUtils.ListPrint.*;
+
 public class GuiInputPatient implements GuiElement {
 
-    private ArrayList<Patient> _patients; // to powinno dodawać to oddziału odpowiedniego który też się poda
+    private HospitalInfo _hospitalInfo;
 
     public GuiInputPatient() {
-        _patients = new ArrayList<>();
     }
 
-    public GuiInputPatient(ArrayList<Patient> patients) {
-        _patients = patients;
+    public GuiInputPatient(HospitalInfo hospitalInfo) {
+        _hospitalInfo = hospitalInfo;
     }
 
     @Override
@@ -59,7 +62,33 @@ public class GuiInputPatient implements GuiElement {
         String description = scanner.nextLine();
         System.out.println();
 
-        _patients.add(new Patient(name, surname, age, isMale, nationality, description));
+        System.out.println("Wydziały w szpitalu:");
+        printLnList(_hospitalInfo.getDepartments());
+        System.out.println();
+
+        System.out.println("Podaj numer wydziału:");
+        int number = scanner.nextInt();
+
+        if(number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
+            return;
+
+        HospitalDepartment department = _hospitalInfo.getDepartments().get(number - 1);
+
+        HospitalDepartment.RoomManager roomManager = department.new RoomManager(); // to boli
+        HospitalDepartment.PersonManager personManager = department.new PersonManager();
+
+        Patient patient = new Patient(name, surname, age, isMale, nationality, description);
+
+        personManager.addPatient(patient);
+
+        // CHWILOWO TAK USTAWIAM
+        boolean result = true; // roomManager.assignRoom(patient);
+
+        if(!result){
+            System.out.println("Nie można dodać pacjenta - brak miejsca na salach");
+            personManager.removePatient(patient);
+            return;
+        }
 
         System.out.println("Pacjent dodany pomyślnie");
     }

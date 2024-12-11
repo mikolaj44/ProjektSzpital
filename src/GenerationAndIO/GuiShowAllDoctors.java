@@ -1,21 +1,22 @@
 package GenerationAndIO;
 
-import Person.Doctor;
-import Person.HospitalWorker;
-
 import java.util.ArrayList;
-import java.util.List;
+
+import Hospital.*;
+import ListUtils.ListPrint;
+import Person.*;
+
+import static ListUtils.ListPrint.*;
 
 public class GuiShowAllDoctors implements GuiElement
 {
-    private List<HospitalWorker> _hospitalWorkers;
+    private HospitalInfo _hospitalInfo;
 
     public GuiShowAllDoctors() {
-        _hospitalWorkers = new ArrayList<>();
     }
 
-    public GuiShowAllDoctors(List<HospitalWorker> hospitalWorkers) {
-        _hospitalWorkers = hospitalWorkers;
+    public GuiShowAllDoctors(HospitalInfo hospitalInfo) {
+        _hospitalInfo = hospitalInfo;
     }
 
     @Override
@@ -25,23 +26,23 @@ public class GuiShowAllDoctors implements GuiElement
 
     @Override
     public void performAction() {
-        if(_hospitalWorkers == null)
-        {
-            System.out.println("Nie ma żadnych lekarzy.");
-            return;
-        }
 
-        boolean found = false;
+        ArrayList<Doctor> doctors = new ArrayList<>();
 
-        for(HospitalWorker hospitalWorker : _hospitalWorkers)
-        {
-            if(hospitalWorker instanceof Doctor) {
-                System.out.println((Doctor) hospitalWorker);
-                found = true;
+        for(HospitalDepartment department : _hospitalInfo.getDepartments()){
+
+            for(HospitalWorker worker : department.getWorkers()){
+
+                if(worker instanceof Doctor)
+                    doctors.add((Doctor)worker);
             }
         }
 
-        if(!found)
-            System.out.println("Nie ma żadnych lekarzy.");
+        if (doctors.isEmpty()) {
+            System.out.println("Zaden lekarz nie zostal jeszcze wprowadzony");
+        } else {
+            System.out.println("Doktorzy: ");
+            printLnList(doctors);
+        }
     }
 }

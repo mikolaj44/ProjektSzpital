@@ -1,13 +1,22 @@
 package GenerationAndIO;
-import Person.Patient;
 
 import java.util.ArrayList;
 
-public class GuiShowAllPatients implements GuiElement {
-    private ArrayList<Patient> _patients;
+import Hospital.HospitalDepartment;
+import Hospital.HospitalInfo;
+import Person.Patient;
 
-    public GuiShowAllPatients(ArrayList<Patient> _patients) {
-        this._patients = _patients;
+import static ListUtils.ListPrint.*;
+
+public class GuiShowAllPatients implements GuiElement {
+
+    private HospitalInfo _hospitalInfo;
+
+    public GuiShowAllPatients() {
+    }
+
+    public GuiShowAllPatients(HospitalInfo hospitalInfo) {
+        _hospitalInfo = hospitalInfo;
     }
 
     @Override
@@ -17,13 +26,19 @@ public class GuiShowAllPatients implements GuiElement {
 
     @Override
     public void performAction() {
-        if (_patients.isEmpty()) {
+
+        ArrayList<Patient> patients = new ArrayList<>();
+
+        for(HospitalDepartment department : _hospitalInfo.getDepartments()){
+
+            patients.addAll(department.getPatients());
+        }
+
+        if (patients.isEmpty()) {
             System.out.println("Zaden pacjent nie zostal jeszcze wprowadzony");
         } else {
             System.out.println("Pacjenci: ");
-            for (Patient patient : _patients) {
-                System.out.println(patient);
-            }
+            printLnList(patients);
         }
 
     }

@@ -9,7 +9,7 @@ public class HospitalDepartment {
 
     protected String name;
 
-    protected PriorityQueue<Person> queue;
+    protected PriorityQueue<Person> queue; // NA RAZIE NIEUŻYWANA
     protected ArrayList<Patient> patients;
     protected ArrayList<HospitalWorker> workers;
     protected ArrayList<Room> rooms;
@@ -39,6 +39,131 @@ public class HospitalDepartment {
         this.possibleFields = possibleFields;
 
         // większośc z tego może być generowana
+    }
+
+    public class RoomManager {
+
+        public boolean assignRoom(Patient p){
+
+            for(Room room : rooms){ // można to inaczej dodawać, z innej strony czy coś ale tak wstępnie
+
+                if(room.getPatients().size() < room.getCapacity()){
+
+                    ArrayList<Patient> newPatientList = room.getPatients();
+                    newPatientList.add(p);
+                    room.setPatients(newPatientList);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public boolean removeFromRoom(Patient p){
+
+            for(Room room : rooms){
+
+                if(room.getPatients().contains(p)){
+
+                    ArrayList<Patient> newPatientList = room.getPatients();
+                    newPatientList.remove(p);
+                    room.setPatients(newPatientList);
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+
+    public class PersonManager {
+
+        public boolean addHospitalWorker(HospitalWorker worker){
+            workers.add(worker);
+            return true;
+        }
+
+        public boolean removeHospitalWorker(HospitalWorker worker){
+
+            if(workers.isEmpty())
+                return false;
+
+            for(HospitalWorker w : workers){
+
+                if(w.equals(worker)){
+                    workers.remove(worker);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public boolean addPatient(Patient patient){
+            patients.add(patient);
+            return true;
+        }
+
+        public boolean removePatient(Patient patient){
+
+            if(patients.isEmpty())
+                return false;
+
+            for(Patient p : patients){
+
+                if(p.equals(patient)){
+                    patients.remove(patient);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public boolean addPatientFromQueue(){
+
+            if(queue.isEmpty())
+                return false;
+
+            patients.add((Patient)queue.poll()); // dodajemy do pacjentów i usuwamy z kolejki
+
+            return true;
+        }
+
+        public boolean assignDoctor(Patient p){ // to do
+
+            if(workers == null || workers.isEmpty())
+                return false;
+
+            int minNumberOfPatients = Integer.MAX_VALUE;
+            Doctor minDoctor = null;
+
+            for(HospitalWorker worker : workers){
+
+                if(worker instanceof Doctor){
+
+                    int numberOfPatients = ((Doctor)worker).getPatients().size();
+                    if(numberOfPatients  < minNumberOfPatients ) {
+                        minDoctor = (Doctor) worker;
+                        minNumberOfPatients = numberOfPatients;
+                    }
+                }
+            }
+
+            if(minDoctor == null)
+                return false;
+
+            minDoctor.registerWith(p);
+
+            return true;
+        }
+
+        public boolean removeDoctor(Patient p, Doctor d){
+
+            if(p.getDoctors() == null || p.getDoctors().isEmpty())
+                return false;
+
+            d.unRegisterWith((Subject)p);
+
+            return true;
+        }
     }
 
     @Override

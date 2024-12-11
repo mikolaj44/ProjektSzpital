@@ -1,24 +1,24 @@
 package GenerationAndIO;
 
-import Person.Doctor;
-import Person.HospitalWorker;
-import Person.Patient;
-
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
+import Hospital.HospitalDepartment;
+import Hospital.HospitalInfo;
+import Person.*;
+
+import static ListUtils.ListPrint.*;
+
 public class GuiInputDoctor implements GuiElement{
 
-    private List<HospitalWorker> _hospitalWorkers;
+    private HospitalInfo _hospitalInfo;
 
     public GuiInputDoctor() {
-        _hospitalWorkers = new ArrayList<>();
     }
 
-    public GuiInputDoctor(List<HospitalWorker> hospitalWorkers) {
-        _hospitalWorkers = hospitalWorkers;
+    public GuiInputDoctor(HospitalInfo hospitalInfo) {
+        _hospitalInfo = hospitalInfo;
     }
 
     @Override
@@ -58,9 +58,34 @@ public class GuiInputDoctor implements GuiElement{
         String nationality = scanner.nextLine();
         System.out.println();
 
-        // TO DO
+        System.out.print("Podaj godzinę rozpoczęcia pracy: ");
+        int startHour = scanner.nextInt();
+        System.out.println();
 
-        //_hospitalWorkers.add(new Doctor(name, surname, age, isMale, nationality));
+        System.out.print("Podaj godzinę zakończenia pracy: ");
+        int endHour = scanner.nextInt();
+        System.out.println();
+
+        // TU JESZCZE MU WPISAĆ SPECJALIZACJĘ
+
+        System.out.println("Wydziały w szpitalu:");
+        printLnList(_hospitalInfo.getDepartments());
+        System.out.println();
+
+        System.out.println("Podaj numer wydziału:");
+        int number = scanner.nextInt();
+
+        if(number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
+            return;
+
+        HospitalDepartment department = _hospitalInfo.getDepartments().get(number - 1);
+
+        HospitalDepartment.RoomManager roomManager = department.new RoomManager(); // to boli
+        HospitalDepartment.PersonManager personManager = department.new PersonManager();
+
+        Doctor doctor = new ExampleDoctor(name, surname, age, isMale, nationality, startHour, endHour, new FieldOfMedicine(new ArrayList<>()) );
+
+        personManager.addHospitalWorker(doctor);
 
         System.out.println("Doktor dodany pomyślnie");
     }
