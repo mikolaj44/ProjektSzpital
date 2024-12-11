@@ -166,6 +166,24 @@ public class HospitalDepartment {
         }
     }
 
+    public class SimulationSystem {
+
+        //będzie mogła być jakaś składowa SimulationInfo szpitala, w której będą te dane co wykomentowałem:
+
+        //private int updateSpeedMs;
+        //private Date date;
+
+        // TO DO :
+
+        void update() {
+
+        }
+
+        void executeIllnesses() {
+
+        }
+    }
+
     @Override
     public String toString() {
         return "HospitalDepartment{" +
