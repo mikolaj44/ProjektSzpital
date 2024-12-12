@@ -1,6 +1,5 @@
 package GenerationAndIO;
 
-import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -69,7 +68,7 @@ public class GuiInputPatient implements GuiElement {
         System.out.println("Podaj numer wydziału:");
         int number = scanner.nextInt();
 
-        if(number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
+        if (number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
             return;
 
         HospitalDepartment department = _hospitalInfo.getDepartments().get(number - 1);
@@ -84,7 +83,7 @@ public class GuiInputPatient implements GuiElement {
         // CHWILOWO TAK USTAWIAM
         boolean result = true; // roomManager.assignRoom(patient);
 
-        if(!result){
+        if (!result) {
             System.out.println("Nie można dodać pacjenta - brak miejsca na salach");
             personManager.removePatient(patient);
             return;

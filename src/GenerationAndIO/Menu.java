@@ -8,20 +8,20 @@ public class Menu {
 
     ArrayList<GuiElement> _elements;
 
-    public Menu(){
+    public Menu() {
         // można tutaj dodać te podstawowe elementy takie jak np w Mainie
     }
 
-    public Menu(ArrayList<GuiElement> elements){
+    public Menu(ArrayList<GuiElement> elements) {
         _elements = elements;
     }
 
     // jakby ktoś chciał
-    public Menu(GuiElement... elements){
+    public Menu(GuiElement... elements) {
 
         _elements = new ArrayList<>();
 
-        for(int i = 0; i < elements.length; i++)
+        for (int i = 0; i < elements.length; i++)
             _elements.add(elements[i]);
     }
 
@@ -31,29 +31,24 @@ public class Menu {
         int i;
 
         // show all options to choose from
-        for(i = 0; i < _elements.size(); i++) {
+        for (i = 0; i < _elements.size(); i++) {
             // variable i will be shown from 1 to n+1
-            System.out.println((i+1) + ". " + _elements.get(i).getDescription());
+            System.out.println((i + 1) + ". " + _elements.get(i).getDescription());
         }
 
         // add an option to end the program
-        System.out.println((i + 1)  + ". Zakończ.");
+        System.out.println((i + 1) + ". Zakończ.");
 
         Scanner scanner = new Scanner(System.in);
-        try
-        {
+        try {
             // variable i will be shown from 1 to n+1
-            int chosenVal =  scanner.nextInt() - 1;
+            int chosenVal = scanner.nextInt() - 1;
             if (chosenVal == i)
                 return false;
             _elements.get(chosenVal).performAction();
-        }
-        catch(InputMismatchException e)
-        {
+        } catch (InputMismatchException e) {
             System.out.println("Podaj numer opcji.");
-        }
-        catch(IndexOutOfBoundsException e)
-        {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("Nie ma takiej opcji.");
         }
 

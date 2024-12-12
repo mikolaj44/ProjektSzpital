@@ -2,7 +2,7 @@ package Person;
 
 import java.util.ArrayList;
 
-public class Patient extends Person implements Subject{
+public class Patient extends Person implements Subject {
 
     // private boolean isIll; // na razie może niech tego nie będzie
     // private Room room;
@@ -13,7 +13,8 @@ public class Patient extends Person implements Subject{
     private ArrayList<Illness> illnesses;
     private ArrayList<Doctor> doctors;
 
-    public Patient(String name, String surname, double age, boolean isMale, String nationality, String description, String diagnosis, VitalSigns vitalSigns, ArrayList<Illness> illnesses) {
+    public Patient(String name, String surname, double age, boolean isMale, String nationality, String description,
+            String diagnosis, VitalSigns vitalSigns, ArrayList<Illness> illnesses) {
         super(name, surname, age, isMale, nationality);
         this.vitalSigns = vitalSigns;
         this.illnesses = illnesses;
@@ -32,29 +33,30 @@ public class Patient extends Person implements Subject{
         this.vitalSigns = null;
     }
 
-    public Patient(){};
+    public Patient() {
+    };
 
-    public boolean isAlive(){ // TO DO
+    public boolean isAlive() { // TO DO
 
         return true;
     }
 
-    public void registerObserver(Observer o){
-        doctors.add((Doctor)o);
+    public void registerObserver(Observer o) {
+        doctors.add((Doctor) o);
     }
 
-    public void notifyObservers(){
-        for(Observer o : doctors)
+    public void notifyObservers() {
+        for (Observer o : doctors)
             o.update(this);
     }
 
-    public void removeObserver(Observer o){
+    public void removeObserver(Observer o) {
 
-        Doctor d = (Doctor)o;
+        Doctor d = (Doctor) o;
 
-        for(Doctor doctor : doctors){
+        for (Doctor doctor : doctors) {
 
-            if(doctor.equals(d)){
+            if (doctor.equals(d)) {
                 doctors.remove(doctor);
                 return;
             }

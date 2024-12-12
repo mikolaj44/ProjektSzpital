@@ -16,12 +16,12 @@ public class HospitalDepartment {
 
     // jednak będą jako osobne a nie wewnętrzne chyba \/\/\/
 
-    //protected RoomManager roomManager;
-    //protected PatientManager patientManager;
+    // protected RoomManager roomManager;
+    // protected PatientManager patientManager;
 
     protected ArrayList<FieldOfMedicine> possibleFields;
 
-    public HospitalDepartment(String name){
+    public HospitalDepartment(String name) {
         this.name = name;
         this.queue = new PriorityQueue<>();
         this.patients = new ArrayList<>();
@@ -30,7 +30,8 @@ public class HospitalDepartment {
         this.possibleFields = new ArrayList<>();
     }
 
-    public HospitalDepartment(String name, PriorityQueue<Person> queue, ArrayList<Patient> patients, ArrayList<HospitalWorker> workers, ArrayList<Room> rooms, ArrayList<FieldOfMedicine> possibleFields) {
+    public HospitalDepartment(String name, PriorityQueue<Person> queue, ArrayList<Patient> patients,
+            ArrayList<HospitalWorker> workers, ArrayList<Room> rooms, ArrayList<FieldOfMedicine> possibleFields) {
         this.name = name;
         this.queue = queue;
         this.patients = patients;
@@ -43,11 +44,11 @@ public class HospitalDepartment {
 
     public class RoomManager {
 
-        public boolean assignRoom(Patient p){
+        public boolean assignRoom(Patient p) {
 
-            for(Room room : rooms){ // można to inaczej dodawać, z innej strony czy coś ale tak wstępnie
+            for (Room room : rooms) { // można to inaczej dodawać, z innej strony czy coś ale tak wstępnie
 
-                if(room.getPatients().size() < room.getCapacity()){
+                if (room.getPatients().size() < room.getCapacity()) {
 
                     ArrayList<Patient> newPatientList = room.getPatients();
                     newPatientList.add(p);
@@ -58,11 +59,11 @@ public class HospitalDepartment {
             return false;
         }
 
-        public boolean removeFromRoom(Patient p){
+        public boolean removeFromRoom(Patient p) {
 
-            for(Room room : rooms){
+            for (Room room : rooms) {
 
-                if(room.getPatients().contains(p)){
+                if (room.getPatients().contains(p)) {
 
                     ArrayList<Patient> newPatientList = room.getPatients();
                     newPatientList.remove(p);
@@ -74,22 +75,21 @@ public class HospitalDepartment {
         }
     }
 
-
     public class PersonManager {
 
-        public boolean addHospitalWorker(HospitalWorker worker){
+        public boolean addHospitalWorker(HospitalWorker worker) {
             workers.add(worker);
             return true;
         }
 
-        public boolean removeHospitalWorker(HospitalWorker worker){
+        public boolean removeHospitalWorker(HospitalWorker worker) {
 
-            if(workers.isEmpty())
+            if (workers.isEmpty())
                 return false;
 
-            for(HospitalWorker w : workers){
+            for (HospitalWorker w : workers) {
 
-                if(w.equals(worker)){
+                if (w.equals(worker)) {
                     workers.remove(worker);
                     return true;
                 }
@@ -97,19 +97,19 @@ public class HospitalDepartment {
             return false;
         }
 
-        public boolean addPatient(Patient patient){
+        public boolean addPatient(Patient patient) {
             patients.add(patient);
             return true;
         }
 
-        public boolean removePatient(Patient patient){
+        public boolean removePatient(Patient patient) {
 
-            if(patients.isEmpty())
+            if (patients.isEmpty())
                 return false;
 
-            for(Patient p : patients){
+            for (Patient p : patients) {
 
-                if(p.equals(patient)){
+                if (p.equals(patient)) {
                     patients.remove(patient);
                     return true;
                 }
@@ -117,37 +117,37 @@ public class HospitalDepartment {
             return false;
         }
 
-        public boolean addPatientFromQueue(){
+        public boolean addPatientFromQueue() {
 
-            if(queue.isEmpty())
+            if (queue.isEmpty())
                 return false;
 
-            patients.add((Patient)queue.poll()); // dodajemy do pacjentów i usuwamy z kolejki
+            patients.add((Patient) queue.poll()); // dodajemy do pacjentów i usuwamy z kolejki
 
             return true;
         }
 
-        public boolean assignDoctor(Patient p){ // to do
+        public boolean assignDoctor(Patient p) { // to do
 
-            if(workers == null || workers.isEmpty())
+            if (workers == null || workers.isEmpty())
                 return false;
 
             int minNumberOfPatients = Integer.MAX_VALUE;
             Doctor minDoctor = null;
 
-            for(HospitalWorker worker : workers){
+            for (HospitalWorker worker : workers) {
 
-                if(worker instanceof Doctor){
+                if (worker instanceof Doctor) {
 
-                    int numberOfPatients = ((Doctor)worker).getPatients().size();
-                    if(numberOfPatients  < minNumberOfPatients ) {
+                    int numberOfPatients = ((Doctor) worker).getPatients().size();
+                    if (numberOfPatients < minNumberOfPatients) {
                         minDoctor = (Doctor) worker;
                         minNumberOfPatients = numberOfPatients;
                     }
                 }
             }
 
-            if(minDoctor == null)
+            if (minDoctor == null)
                 return false;
 
             minDoctor.registerWith(p);
@@ -155,12 +155,12 @@ public class HospitalDepartment {
             return true;
         }
 
-        public boolean removeDoctor(Patient p, Doctor d){
+        public boolean removeDoctor(Patient p, Doctor d) {
 
-            if(p.getDoctors() == null || p.getDoctors().isEmpty())
+            if (p.getDoctors() == null || p.getDoctors().isEmpty())
                 return false;
 
-            d.unRegisterWith((Subject)p);
+            d.unRegisterWith((Subject) p);
 
             return true;
         }
@@ -168,10 +168,11 @@ public class HospitalDepartment {
 
     public class SimulationSystem {
 
-        //będzie mogła być jakaś składowa SimulationInfo szpitala, w której będą te dane co wykomentowałem:
+        // będzie mogła być jakaś składowa SimulationInfo szpitala, w której będą te
+        // dane co wykomentowałem:
 
-        //private int updateSpeedMs;
-        //private Date date;
+        // private int updateSpeedMs;
+        // private Date date;
 
         // TO DO :
 

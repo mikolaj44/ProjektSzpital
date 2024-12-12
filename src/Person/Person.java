@@ -16,7 +16,8 @@ public abstract class Person {
         this.nationality = nationality;
     }
 
-    public Person(){} // do wpisywania danych musi być
+    public Person() {
+    } // do wpisywania danych musi być
 
     @Override
     public String toString() {

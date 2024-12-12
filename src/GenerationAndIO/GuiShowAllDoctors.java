@@ -3,13 +3,11 @@ package GenerationAndIO;
 import java.util.ArrayList;
 
 import Hospital.*;
-import ListUtils.ListPrint;
 import Person.*;
 
 import static ListUtils.ListPrint.*;
 
-public class GuiShowAllDoctors implements GuiElement
-{
+public class GuiShowAllDoctors implements GuiElement {
     private HospitalInfo _hospitalInfo;
 
     public GuiShowAllDoctors() {
@@ -29,12 +27,12 @@ public class GuiShowAllDoctors implements GuiElement
 
         ArrayList<Doctor> doctors = new ArrayList<>();
 
-        for(HospitalDepartment department : _hospitalInfo.getDepartments()){
+        for (HospitalDepartment department : _hospitalInfo.getDepartments()) {
 
-            for(HospitalWorker worker : department.getWorkers()){
+            for (HospitalWorker worker : department.getWorkers()) {
 
-                if(worker instanceof Doctor)
-                    doctors.add((Doctor)worker);
+                if (worker instanceof Doctor)
+                    doctors.add((Doctor) worker);
             }
         }
 

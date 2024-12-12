@@ -29,7 +29,7 @@ public class GuiShowAllPatients implements GuiElement {
 
         ArrayList<Patient> patients = new ArrayList<>();
 
-        for(HospitalDepartment department : _hospitalInfo.getDepartments()){
+        for (HospitalDepartment department : _hospitalInfo.getDepartments()) {
 
             patients.addAll(department.getPatients());
         }

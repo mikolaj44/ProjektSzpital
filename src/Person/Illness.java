@@ -10,7 +10,8 @@ public class Illness {
     private double effectMultiplier;
     private boolean surgeryIsNeeded;
 
-    public Illness(String name, String description, int averageRecoveryTimeDays, int dayWhenDiagnosed, double lethality, double effectMultiplier, boolean surgeryIsNeeded) {
+    public Illness(String name, String description, int averageRecoveryTimeDays, int dayWhenDiagnosed, double lethality,
+            double effectMultiplier, boolean surgeryIsNeeded) {
         this.name = name;
         this.description = description;
         this.averageRecoveryTimeDays = averageRecoveryTimeDays;
@@ -20,12 +21,12 @@ public class Illness {
         this.surgeryIsNeeded = surgeryIsNeeded;
     }
 
-    public boolean hasBeenHealed(int currentDateDays){
+    public boolean hasBeenHealed(int currentDateDays) {
 
-        if(currentDateDays < averageRecoveryTimeDays)
+        if (currentDateDays < averageRecoveryTimeDays)
             return false;
 
-        if(Math.random() % 10 < 5) // przykładowo
+        if (Math.random() % 10 < 5) // przykładowo
             return false;
 
         return true;

@@ -10,7 +10,7 @@ import Person.*;
 
 import static ListUtils.ListPrint.*;
 
-public class GuiInputDoctor implements GuiElement{
+public class GuiInputDoctor implements GuiElement {
 
     private HospitalInfo _hospitalInfo;
 
@@ -75,7 +75,7 @@ public class GuiInputDoctor implements GuiElement{
         System.out.println("Podaj numer wydziału:");
         int number = scanner.nextInt();
 
-        if(number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
+        if (number <= 0 || number > _hospitalInfo.getDepartments().size()) // dodać komunikaty itd
             return;
 
         HospitalDepartment department = _hospitalInfo.getDepartments().get(number - 1);
@@ -83,7 +83,8 @@ public class GuiInputDoctor implements GuiElement{
         HospitalDepartment.RoomManager roomManager = department.new RoomManager(); // to boli
         HospitalDepartment.PersonManager personManager = department.new PersonManager();
 
-        Doctor doctor = new Doctor(name, surname, age, isMale, nationality, startHour, endHour, new FieldOfMedicine(new ArrayList<>()) );
+        Doctor doctor = new Doctor(name, surname, age, isMale, nationality, startHour, endHour,
+                new FieldOfMedicine(new ArrayList<>()));
 
         personManager.addHospitalWorker(doctor);
 

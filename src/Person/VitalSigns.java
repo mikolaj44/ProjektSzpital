@@ -2,14 +2,15 @@ package Person;
 
 import java.util.Arrays;
 
-public class VitalSigns{
+public class VitalSigns {
 
     private int[] bloodPressureMmHg;
     private int breathingRatePerMinute;
     private int pulseRatePerMinute;
     private double temperatureCelsius;
 
-    public VitalSigns(int[] bloodPressureMmHg, int breathingRatePerMinute, int pulseRatePerMinute, double temperatureCelsius) {
+    public VitalSigns(int[] bloodPressureMmHg, int breathingRatePerMinute, int pulseRatePerMinute,
+            double temperatureCelsius) {
         this.bloodPressureMmHg = bloodPressureMmHg;
         this.breathingRatePerMinute = breathingRatePerMinute;
         this.pulseRatePerMinute = pulseRatePerMinute;

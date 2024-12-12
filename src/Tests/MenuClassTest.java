@@ -7,8 +7,6 @@ import Person.HospitalWorker;
 import Person.Patient;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class MenuClassTest {
 
@@ -18,12 +16,14 @@ public class MenuClassTest {
         departments.add(new HospitalDepartment("SOR"));
         departments.add(new HospitalDepartment("Oddzial polozniczy"));
 
-        HospitalInfo hospitalInfo = new HospitalInfo(-1,departments);
+        HospitalInfo hospitalInfo = new HospitalInfo(-1, departments);
 
-        Menu mainMenu = new Menu(new GuiInputPatient(hospitalInfo), new GuiInputDoctor(hospitalInfo), new GuiShowAllPatients(hospitalInfo), new GuiShowAllDoctors(hospitalInfo));
+        Menu mainMenu = new Menu(new GuiInputPatient(hospitalInfo), new GuiInputDoctor(hospitalInfo),
+                new GuiShowAllPatients(hospitalInfo), new GuiShowAllDoctors(hospitalInfo));
 
         while (true) {
-            if (!mainMenu.showMenu()) break;
+            if (!mainMenu.showMenu())
+                break;
         }
     }
 }
