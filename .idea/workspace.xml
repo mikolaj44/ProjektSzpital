@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f9191b-c77f-4227-b8d9-98643bb5844d" name="Changes" comment="-dodałem klasę Menu która trzyma różne GuiElements i test, który ją wywołuje&#10;-dodałem składowe nazwa i opis do choroby&#10;-HospitalDepartment usunięto abstract&#10;-usunąłem ReceptionistInputTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputDoctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputPatient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiInputPatient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllDoctors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllDoctors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllPatients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/GuiShowAllPatients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenerationAndIO/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerationAndIO/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/DepartmentManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/HospitalDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/ListUtils/ListPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/FieldOfMedicine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/HospitalWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Illness.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektSzpitalGitHub/Person/VitalSigns.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/HospitalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/HospitalSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/PatientManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/ReceptionistSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/RoomManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/SimulationSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/HospitalWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/HospitalWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/MenuClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/MenuClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/ExampleDoctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/RandomizableIllness.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,14 +52,14 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mikolaj44/ProjektSzpital",
-    "accountId": "fb103807-4395-44fa-8bd6-64ac72daae8a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mikolaj44/ProjektSzpital&quot;,
+    &quot;accountId&quot;: &quot;fb103807-4395-44fa-8bd6-64ac72daae8a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -82,7 +78,7 @@
     "Application.MenuClassTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "interface-console",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mikołaj/IdeaProjects/ProjektSzpitalGitHub",
     "node.js.detected.package.eslint": "true",
@@ -94,6 +90,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

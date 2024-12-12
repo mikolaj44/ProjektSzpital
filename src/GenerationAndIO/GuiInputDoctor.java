@@ -83,7 +83,7 @@ public class GuiInputDoctor implements GuiElement{
         HospitalDepartment.RoomManager roomManager = department.new RoomManager(); // to boli
         HospitalDepartment.PersonManager personManager = department.new PersonManager();
 
-        Doctor doctor = new ExampleDoctor(name, surname, age, isMale, nationality, startHour, endHour, new FieldOfMedicine(new ArrayList<>()) );
+        Doctor doctor = new Doctor(name, surname, age, isMale, nationality, startHour, endHour, new FieldOfMedicine(new ArrayList<>()) );
 
         personManager.addHospitalWorker(doctor);
 

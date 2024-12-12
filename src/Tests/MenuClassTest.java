@@ -18,7 +18,7 @@ public class MenuClassTest {
         departments.add(new HospitalDepartment("SOR"));
         departments.add(new HospitalDepartment("Oddzial polozniczy"));
 
-        HospitalInfo hospitalInfo = new HospitalInfo(-1,-1,departments);
+        HospitalInfo hospitalInfo = new HospitalInfo(-1,departments);
 
         Menu mainMenu = new Menu(new GuiInputPatient(hospitalInfo), new GuiInputDoctor(hospitalInfo), new GuiShowAllPatients(hospitalInfo), new GuiShowAllDoctors(hospitalInfo));
 

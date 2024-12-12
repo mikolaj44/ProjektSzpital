@@ -1,6 +1,6 @@
 package Person;
 
-public abstract class Illness {
+public class Illness {
 
     private String name;
     private String description;
@@ -19,8 +19,6 @@ public abstract class Illness {
         this.effectMultiplier = effectMultiplier;
         this.surgeryIsNeeded = surgeryIsNeeded;
     }
-
-    public abstract void performAction(Patient p);
 
     public boolean hasBeenHealed(int currentDateDays){
 

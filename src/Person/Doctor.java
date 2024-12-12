@@ -2,7 +2,7 @@ package Person;
 
 import java.util.ArrayList;
 
-public abstract class Doctor extends HospitalWorker implements Observer {
+public class Doctor extends HospitalWorker implements Observer {
 
     protected FieldOfMedicine fieldOfMedicine;
     protected ArrayList<Patient> patients;
@@ -15,9 +15,13 @@ public abstract class Doctor extends HospitalWorker implements Observer {
 
     //public void update()
 
-    public abstract void update(Subject s);
+    public void update(Subject s) {
 
-    public abstract void diagnose(Patient p);
+    }
+
+    public void diagnose(Patient p) {
+
+    }
 
     public void registerWith(Subject s){
 
@@ -30,7 +34,9 @@ public abstract class Doctor extends HospitalWorker implements Observer {
         s.removeObserver(this);
     }
 
-    public abstract void performAction(Patient p);
+    public void performAction(Patient p) {
+
+    }
 
     @Override
     public String toString() {
